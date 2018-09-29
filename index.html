@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Twitch Stream Update</title>
+
+  	<!--Metadata-->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--jQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+	<!-- CSS -->
+  	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<!--Wikipedia Viewer-->
+<div class="container">
+	<div class="center">
+		<h1 class="title">Wikipedia <em>Viewer</em></h1>
+		<form id="search" action="javascript:void(0);">
+			<div class="search">
+				<input type="text" placeholder="Search Wikipedia..." class="query">
+				<button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+	     	</div>
+		</form>
+		<p><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="random">Click here for a random article.</a></p>
+	</div>
+</div>
+
+<div class="result-container">
+	<ul class="results">
+	</ul>
+</div>
+
+
+<!--<footer>
+	<p>Design & Development - Elain Tran</p>
+</footer>-->
+
+	<!--Javascript-->
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
