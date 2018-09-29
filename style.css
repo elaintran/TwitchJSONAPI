@@ -3,18 +3,38 @@ html, body {
 	padding: 0;
 }
 
-.twitch-navbar {
-/*	background-color: #4b367c;*/
-	padding: 2%;
+ul {
+	margin: 0;
+}
 
+.twitch-navbar {
+	background-color: #4b367c;
+	padding: 2%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .twitch-logo {
-	width: 150px;
+	width: 100px;
+}
+
+.logo {
+	margin-right: auto;
+}
+
+.search {
+	margin-left: auto;
+	padding: 0;
 }
 
 .twitch-navbar li {
 	list-style: none;
+	color: white;
+	font-family: "Helvetica", sans-serif;
+	font-size: 20px;
+	float: left;
+	padding: 0 20px;
 }
 
 ul {
