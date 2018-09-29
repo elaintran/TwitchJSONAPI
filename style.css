@@ -1,22 +1,32 @@
 html, body {
 	margin: 0;
 	padding: 0;
+    background-image: linear-gradient(to bottom, #351A6B, #6445A2);
+    height: 100%;
+}
+
+body {
+	/*background: rgba(0, 0, 0, 0.5);*/
 }
 
 ul {
 	margin: 0;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+}
+
 .twitch-navbar {
-	background-color: #4b367c;
-	padding: 2%;
+	padding: 3% 5%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .twitch-logo {
-	width: 100px;
+	width: 120px;
 }
 
 .logo {
@@ -31,12 +41,47 @@ ul {
 .twitch-navbar li {
 	list-style: none;
 	color: white;
+}
+
+.tab {
 	font-family: "Helvetica", sans-serif;
 	font-size: 20px;
-	float: left;
-	padding: 0 20px;
+	padding: 0 30px;
 }
 
 ul {
 	padding: 0;
 }
+
+/*form {
+	background-color: white;
+	border-radius: 30px;
+}*/
+
+input {
+	border: transparent;
+	background: transparent;
+	color: white;
+}
+
+input:focus, input:active {
+	outline: none;
+}
+
+input::placeholder {
+	color: white;
+}
+
+.search-bar {
+	background-color: transparent;
+	border: 2px solid white;
+	border-radius: 20px;
+	padding: 5px;
+}
+
+i {
+	padding: 0 10px;
+	font-size: 13px;
+}
+
+/*red #ec1313*/

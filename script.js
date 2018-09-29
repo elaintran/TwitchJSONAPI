@@ -1,3 +1,3 @@
 $(document).ready(function() {
-	let streamers = ["Akariss", "Nimious", "Dire_Thunder"];
+	let streamers = ["akariss", "nimious", "dire_thunder", "disguisedtoasths", "joshjepson", "attackingtucans"];
 })
