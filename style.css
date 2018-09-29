@@ -1,1 +1,22 @@
-#4b367c
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.twitch-navbar {
+/*	background-color: #4b367c;*/
+	padding: 2%;
+
+}
+
+.twitch-logo {
+	width: 150px;
+}
+
+.twitch-navbar li {
+	list-style: none;
+}
+
+ul {
+	padding: 0;
+}
