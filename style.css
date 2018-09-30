@@ -2,6 +2,7 @@ html, body {
 	margin: 0;
 	padding: 0;
     background-image: linear-gradient(to bottom, #351A6B, #6445A2);
+    background: #171721;
     height: 100%;
 }
 
@@ -19,14 +20,16 @@ a {
 }
 
 .twitch-navbar {
-	padding: 3% 5%;
+	padding: 4% 15%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	/*background: #4b367c;*/
 }
 
 .twitch-logo {
-	width: 120px;
+	/*width: 90px;*/
+	width: 30px;
 }
 
 .logo {
@@ -44,8 +47,10 @@ a {
 }
 
 .tab {
-	font-family: "Helvetica", sans-serif;
-	font-size: 20px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-size: 15px;
 	padding: 0 30px;
 }
 
@@ -74,9 +79,9 @@ input::placeholder {
 
 .search-bar {
 	background-color: transparent;
-	border: 2px solid white;
+	border: 1px solid white;
 	border-radius: 20px;
-	padding: 5px;
+	padding: 3px;
 }
 
 i {
@@ -85,3 +90,27 @@ i {
 }
 
 /*red #ec1313*/
+
+.infocard {
+    width: 400px;
+    height: calc(400/16*9px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+    background-color: black;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4), 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 50px;
+    position: relative;
+    margin: 20px auto;
+}
+.infocard:hover {
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5), 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.row-online {
+	padding: 0 15%;
+}
