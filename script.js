@@ -1,24 +1,33 @@
+//client id=iuxioif0oajo72w7a5kgbeuj7cppwp
+
   var channels = [
-/*  "akariss",
-  "dire_thunder",*/
+  "akariss",
+  "dire_thunder",
   "disguisedtoasths",
-/*  "joshjepson",
-  "nimious"*/
+  "joshjepson",
+  "nimious"
   ];
 /*  var URL_Streams = 'https://api.twitch.tv/kraken/streams/';
   var URL_Channel = 'https://api.twitch.tv/kraken/channels/';
-  var callback = '?callback=?&client_id=j15r3tcqv1ies1opd4ve46kq74106un';
+  var callback = '?&client_id=iuxioif0oajo72w7a5kgbeuj7cppwp';
 
   function getChannelInfo() {
     channels.forEach(function(channel) {
       function makeURL(type, name) {
         return URL_Streams  + name + callback;
       };*/
+$(function() {
+  $.getJSON("https://api.twitch.tv/kraken/users/nimious?client_id=iuxioif0oajo72w7a5kgbeuj7cppwp").done(function(data) {
+    console.log(data);
+  })
+});
 
+  var preview = "https://static-cdn.jtvnw.net/previews-ttv/live_user_";
+  var ending = "-640x360.jpg"
 
   var URL_Streams = 'https://api.twitch.tv/kraken/streams/';
   var URL_Channel = 'https://api.twitch.tv/kraken/channels/';
-  var callback = '?callback=?&client_id=j15r3tcqv1ies1opd4ve46kq74106un';
+  var callback = '?client_id=iuxioif0oajo72w7a5kgbeuj7cppwp';
 
   function getChannelInfo() {
     channels.forEach(function(channel) {
@@ -41,7 +50,7 @@
             description = status === "online" ? ': ' + data.status : "";
             html = '<div class="row-' + 
             status + '"><div class="col-xs-2 col-sm-1" id="icon"><img src="' + 
-            logo + '" class="logo"></div><div class="col-xs-10 col-sm-3" id="name"><a href="' + 
+            preview + channel + ending + '" class="logo"></div><div class="col-xs-10 col-sm-3" id="name"><a href="' + 
             data.url + '" target="_blank">' + 
             name + '</a></div><div class="col-xs-10 col-sm-8" id="streaming">'+ 
             game + '<div>' + 
