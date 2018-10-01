@@ -29,6 +29,10 @@ $(function() {
   var URL_Channel = 'https://api.twitch.tv/kraken/channels/';
   var callback = '?client_id=iuxioif0oajo72w7a5kgbeuj7cppwp';
 
+  var streamimage;
+
+/*  description = status === "online" ? streamimage === preview + channel + ending : streamimage === data.video_banner;*/
+
   function getChannelInfo() {
     channels.forEach(function(channel) {
       function makeURL(type, name) {
@@ -49,12 +53,12 @@ $(function() {
             name = data.display_name != null ? data.display_name : channel,
             description = status === "online" ? ': ' + data.status : "";
             html = '<div class="row-' + 
-            status + '"><div class="col-xs-2 col-sm-1" id="icon"><img src="' + 
-            preview + channel + ending + '" class="logo"></div><div class="col-xs-10 col-sm-3" id="name"><a href="' + 
+            status + '"><div class="col-sm-4"><img class ="category__image" src="' + 
+            data.video_banner + ')"><div class="name"><a href="' + 
             data.url + '" target="_blank">' + 
-            name + '</a></div><div class="col-xs-10 col-sm-8" id="streaming">'+ 
+            name + '</a><div class="streaming">'+ 
             game + '<div>' + 
-            description + '</div></div></div>';
+            description + '</div></div></div></div></div>';
           status === "online" ? $(".results").prepend(html) : $(".results").append(html);
         });
       });
