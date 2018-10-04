@@ -5,7 +5,11 @@
   "dire_thunder",
   "disguisedtoasths",
   "joshjepson",
-  "nimious"
+  "nimious",
+  "marbelsoda",
+  "scarra",
+  "fedmyster",
+  "lilypichu"
   ];
 /*  var URL_Streams = 'https://api.twitch.tv/kraken/streams/';
   var URL_Channel = 'https://api.twitch.tv/kraken/channels/';
@@ -22,6 +26,8 @@ $(function() {
   })
 });
 
+/*            description = status === "online" ? var streamimage === preview + channel + ending : var streamimage === data.video_banner;*/
+
   var preview = "https://static-cdn.jtvnw.net/previews-ttv/live_user_";
   var ending = "-640x360.jpg"
 
@@ -29,14 +35,12 @@ $(function() {
   var URL_Channel = 'https://api.twitch.tv/kraken/channels/';
   var callback = '?client_id=iuxioif0oajo72w7a5kgbeuj7cppwp';
 
-  var streamimage;
-
-/*  description = status === "online" ? streamimage === preview + channel + ending : streamimage === data.video_banner;*/
-
   function getChannelInfo() {
     channels.forEach(function(channel) {
       function makeURL(type, name) {
         return 'https://api.twitch.tv/kraken/' + type + '/' + name + callback;
+        /*return URL_Streams + name + callback;
+        return URL_Channels + name + callback;*/
       };
       $.getJSON(makeURL("streams", channel), function(data) {
         var game,
@@ -51,14 +55,16 @@ $(function() {
         $.getJSON(makeURL("channels", channel), function(data) {
           var logo = data.logo != null ? data.logo : "https://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F",
             name = data.display_name != null ? data.display_name : channel,
-            description = status === "online" ? ': ' + data.status : "";
+            description = status === "online" ? data.status : "";
             html = '<div class="row-' + 
-            status + '"><div class="col-sm-4"><img class ="category__image" src="' + 
-            data.video_banner + ')"><div class="name"><a href="' + 
-            data.url + '" target="_blank">' + 
-            name + '</a><div class="streaming">'+ 
-            game + '<div>' + 
-            description + '</div></div></div></div></div>';
+            status + '"><div class="col-sm-6"><div class="card"><a href="' + 
+            data.url + '" target="_blank"><div class="twitch-thumbnail"><div class="live"><div class="circle"></div>' + status + '</div><img src="https://steamstore-a.akamaihd.net/public/shared/images/apphubs/play_icon80.png" class="play-icon"><img class="category__image" src="' + 
+            data.video_banner + ')"></div><div class="info"><div class="col-xs-2"><img class="avatar category__image" src="' +
+            logo + '"></div></div><div class="words col-xs-10"><div class="description"><span class="game">[' +
+            game + '] </span>' +
+            description + '</div>' + 
+            name + '<div class="streaming">'+ 
+            game + '</div></div></div></a></div></div>';
           status === "online" ? $(".results").prepend(html) : $(".results").append(html);
         });
       });
@@ -82,6 +88,11 @@ $(document).ready(function() {
     }
   })
 });
+
+//if online, display "live"; if offline, display "offline"
+//fix data.stream.viewers
+//fix data.stream.preview.large
+//if online, link to stream; if offline, link to channel
 
 /*$(document).ready(function() {
 
