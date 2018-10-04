@@ -2,7 +2,7 @@ html, body {
 	margin: 0;
 	padding: 0;
     /*background-image: linear-gradient(to bottom, #211e37, #2d274b);*/
-    background: #222039;
+    background: #272335;
     height: 100%;
 }
 
@@ -151,6 +151,7 @@ i {
 
 .row-online, .row-offline {
 	width: calc(100% - -20px);
+	color: white;
 }
 
 .row-online .circle {
@@ -184,10 +185,9 @@ i {
 }
 
 .card {
-	background: #171721;
+	background: #17141f;
 	padding: 5px;
 	overflow: auto;
-    box-shadow: 5px 5px 10px #000000;
     padding-bottom: 0px;
 }
 

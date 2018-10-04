@@ -9,7 +9,9 @@
   "marbelsoda",
   "scarra",
   "fedmyster",
-  "lilypichu"
+  "lilypichu",
+  "pokimane",
+  "xell"
   ];
 /*  var URL_Streams = 'https://api.twitch.tv/kraken/streams/';
   var URL_Channel = 'https://api.twitch.tv/kraken/channels/';
@@ -58,13 +60,17 @@ $(function() {
             description = status === "online" ? data.status : "";
             html = '<div class="row-' + 
             status + '"><div class="col-sm-6"><div class="card"><a href="' + 
-            data.url + '" target="_blank"><div class="twitch-thumbnail"><div class="live"><div class="circle"></div>' + status + '</div><img src="https://steamstore-a.akamaihd.net/public/shared/images/apphubs/play_icon80.png" class="play-icon"><img class="category__image" src="' + 
-            data.video_banner + ')"></div><div class="info"><div class="col-xs-2"><img class="avatar category__image" src="' +
-            logo + '"></div></div><div class="words col-xs-10"><div class="description"><span class="game">[' +
+            data.url + '" target="_blank"><div class="twitch-thumbnail"><div class="live"><div class="circle"></div>' +
+            status + '</div><img src="https://steamstore-a.akamaihd.net/public/shared/images/apphubs/play_icon80.png" class="play-icon"><img class="category__image" src="' + 
+            data.video_banner + ')"></a></div><div class="info"><div class="col-xs-2"><a href="' +
+            data.url + '/videos" target="_blank"><img class="avatar category__image" src="' +
+            logo + '"></a></div></div><div class="words col-xs-10"><a href="' + 
+            data.url + '" target="_blank"><div class="description"><span class="game">[' +
             game + '] </span>' +
-            description + '</div>' + 
+            description + '</div></a><a href="' +
+            data.url + '/videos" target="_blank">' + 
             name + '<div class="streaming">'+ 
-            game + '</div></div></div></a></div></div>';
+            game + '</div></a></div></div></div></div>';
           status === "online" ? $(".results").prepend(html) : $(".results").append(html);
         });
       });
