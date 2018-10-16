@@ -2,7 +2,7 @@ html, body {
 	margin: 0;
 	padding: 0;
     /*background-image: linear-gradient(to bottom, #211e37, #2d274b);*/
-    background: #272335;
+    background: #17141f;
     height: 100%;
 }
 
@@ -10,8 +10,45 @@ body {
 	/*background: rgba(0, 0, 0, 0.5);*/
 }
 
-ul {
+/*top ul*/
+/*ul {
 	margin: 0;
+}*/
+
+ul {
+	color: white;
+}
+
+li {
+	text-decoration: none;
+	text-align: center;
+}
+
+.glitch-logo {
+	width: 25px;
+}
+
+.twitch-topnavbar {
+	position: fixed;
+	background: #392e5c;
+	width: 100%;
+	text-align: left;
+	z-index: 100000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+}
+
+.twitch-sidenavbar {
+	position: fixed;
+	height: 100vh;
+	background: #392e5c;
+	top: 30px;
+}
+
+.glitch-logo {
+	margin: 0 10px;
 }
 
 a, a:hover {
@@ -39,6 +76,10 @@ a, a:hover {
 .search {
 	margin-left: auto;
 	padding: 0;
+}
+
+.twitch-topnavbar li {
+	list-style: none;
 }
 
 .twitch-navbar li {
@@ -106,7 +147,7 @@ i {
 
 
 .result-container {
-	padding: 0 12% 4%;
+	padding: 60px 12% 4%;
 }
 
 .row, .col-sm-6 {
@@ -185,12 +226,15 @@ i {
 }
 
 .card {
-	background: #17141f;
+	background: #272335;
 	padding: 5px;
 	overflow: auto;
     padding-bottom: 0px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.8);
 }
 
 .row-online .streaming {
 	display: none;
 }
+
+//17141f

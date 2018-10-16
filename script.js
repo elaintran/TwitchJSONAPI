@@ -11,7 +11,9 @@
   "fedmyster",
   "lilypichu",
   "pokimane",
-  "xell"
+  "xell",
+  "teegrassi",
+  "taj1ma"
   ];
 /*  var URL_Streams = 'https://api.twitch.tv/kraken/streams/';
   var URL_Channel = 'https://api.twitch.tv/kraken/channels/';
@@ -95,10 +97,8 @@ $(document).ready(function() {
   })
 });
 
-//if online, display "live"; if offline, display "offline"
 //fix data.stream.viewers
 //fix data.stream.preview.large
-//if online, link to stream; if offline, link to channel
 
 /*$(document).ready(function() {
 
