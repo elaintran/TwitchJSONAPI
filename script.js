@@ -61,7 +61,7 @@ $(function() {
             name = data.display_name != null ? data.display_name : channel,
             description = status === "online" ? data.status : "";
             html = '<div class="row-' + 
-            status + '"><div class="col-sm-6"><div class="card"><a href="' + 
+            status + '"><div class="col-sm-4"><div class="card"><a href="' + 
             data.url + '" target="_blank"><div class="twitch-thumbnail"><div class="live"><div class="circle"></div>' +
             status + '</div><img src="https://steamstore-a.akamaihd.net/public/shared/images/apphubs/play_icon80.png" class="play-icon"><img class="category__image" src="' + 
             data.video_banner + ')"></a></div><div class="info"><div class="col-xs-2"><a href="' +

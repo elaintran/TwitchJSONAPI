@@ -37,18 +37,24 @@ li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 40px;
+	height: 50px;
 }
 
 .twitch-sidenavbar {
 	position: fixed;
 	height: 100vh;
-	background: #392e5c;
-	top: 30px;
+	background: #17141f;
+	top: 50px;
+	border-right: 1px solid #2c2541;
+}
+
+.twitch-sidenavbar li {
+	margin: 20px 10px;
+	list-style: none;
 }
 
 .glitch-logo {
-	margin: 0 10px;
+	margin: 0 20px;
 }
 
 a, a:hover {
@@ -64,6 +70,14 @@ a, a:hover {
 	/*background: #2d274b;*/
 }
 
+.fa {
+	font-size: 15px;
+}
+
+.fa-search {
+	font-size: 13px;
+}
+
 .twitch-logo {
 	/*width: 90px;*/
 	width: 90px;
@@ -74,6 +88,7 @@ a, a:hover {
 }
 
 .search {
+	color: #b8b5c0;
 	margin-left: auto;
 	padding: 0;
 }
@@ -116,19 +131,22 @@ input:focus, input:active {
 }
 
 input::placeholder {
-	color: white;
+	color: #b8b5c0;
 }
 
 .search-bar {
-	background-color: transparent;
-	border: 1px solid white;
-	border-radius: 20px;
+	background-color: #17141f;
+	/*border: 1px solid white;*/
+	/*border-radius: 20px;*/
+	border-radius: 2px;
 	padding: 3px;
+	color: #b8b5c0;
+	margin: 0 30px;
 }
 
 i {
 	padding: 0 10px;
-	font-size: 13px;
+	font-size: 10px;
 }
 
 /*red #ec1313*/
@@ -147,19 +165,19 @@ i {
 
 
 .result-container {
-	padding: 60px 12% 4%;
+	padding: 70px 30px 4% 90px;
 }
 
-.row, .col-sm-6 {
+.row, .col-sm-4 {
 	margin: 0;
 	padding: 0;
 }
 
-.col-sm-6 {
+.col-sm-4 {
 	padding: 0 20px 20px 0;
 }
 
-.col-sm-6 a {
+.col-sm-4 a {
 	color: white;
 	text-decoration: none;
 }
@@ -227,7 +245,6 @@ i {
 
 .card {
 	background: #272335;
-	padding: 5px;
 	overflow: auto;
     padding-bottom: 0px;
     box-shadow: 2px 2px 4px rgba(0,0,0,.8);
