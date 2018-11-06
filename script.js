@@ -63,7 +63,7 @@ $(function() {
             html = '<div class="row-' + 
             status + '"><div class="col-sm-4"><div class="card"><a href="' + 
             data.url + '" target="_blank"><div class="twitch-thumbnail"><div class="live"><div class="circle"></div>' +
-            status + '</div><img src="https://steamstore-a.akamaihd.net/public/shared/images/apphubs/play_icon80.png" class="play-icon"><img class="category__image" src="' + 
+            status + '</div><img class="category__image" src="' + 
             data.video_banner + ')"></a></div><div class="info"><div class="col-xs-2"><a href="' +
             data.url + '/videos" target="_blank"><img class="avatar category__image" src="' +
             logo + '"></a></div></div><div class="words col-xs-10"><a href="' + 
