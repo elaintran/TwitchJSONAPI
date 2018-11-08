@@ -54,6 +54,8 @@ $(function() {
           status = "offline";
         } else {
           game = data.stream.game;
+          preview = data.stream.preview.large;
+          /*viewers = data.stream.viewers;*/
           status = "online";
         };
         $.getJSON(makeURL("channels", channel), function(data) {
@@ -67,11 +69,10 @@ $(function() {
             data.video_banner + ')"></a></div><div class="info"><div class="col-xs-2"><a href="' +
             data.url + '/videos" target="_blank"><img class="avatar category__image" src="' +
             logo + '"></a></div></div><div class="words col-xs-10"><a href="' + 
-            data.url + '" target="_blank"><div class="description"><span class="game">[' +
-            game + '] </span>' +
-            description + '</div></a><a href="' +
+            data.url + '" target="_blank"><div class="description"><span class="game">' +
+            game + '</span></div></a><a href="' +
             data.url + '/videos" target="_blank">' + 
-            name + '<div class="streaming">'+ 
+            name + '<div class="streaming">' +
             game + '</div></a></div></div></div></div>';
           status === "online" ? $(".results").prepend(html) : $(".results").append(html);
         });
