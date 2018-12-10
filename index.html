@@ -6,9 +6,6 @@
   	<!--Metadata-->
   	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  	<!--Bootstrap-->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
 	<!-- Bootstrap Core CSS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 
@@ -24,48 +21,17 @@
 
 <body>
 
-<!--Navigation Bar-->
-	<ul class="twitch-topnavbar">
-		<li><img src="images/glitchlogo.png" class="glitch-logo"></li>
-		<li class="search"><div class="search-bar"><i class="fa fa-search"></i><input placeholder="Search"></div></li>
-	</ul>
-	<ul class="twitch-sidenavbar">
-		<li><i class="fa fa-video"></i></li>
-		<li><i class="fa fa-wifi"></i></li>
-		<li><i class="fa fa-power-off"></i></li>
-	</ul>
-	<!--<ul class="twitch-navbar">
-		<li class="logo"><img src="images/twitchlogo.png" class="twitch-logo"></li>
-		<li class="tab"><a href="#">Browse</a></li>
-		<li class="tab"><a href="#">Live Channels</a></li>
-		<li class="tab"><a href="#">Offline</a></li>
-	</ul>-->
-
-
-<div id="browse"></div>
-
-<div id="live-channels"></div>
-
-<div id="offline"></div>
-
-	<div class="background-image">
-		<img class="hidden-image" src="images/banner-background.png" width="100%">
-		<div class="title-description">
-			<div class="row">
-				<div class="col-md-8">
-					<h1 class="title">Twitch Monitor</h1>
-					<p class="subtitle">Developed using the Twitch API, check the current status of all your favorite streamers, including games playing, number of viewers, and much more!</p>
-				</div>
-			</div>
+<div class="container">
+	<div class="current-status">
+		<div class="tag all-tag active"><h4>All</h4></div>
+		<div class="tag live-tag"><h4>Live</h4></div>
+		<div class="tag offline-tag"><h4>Offline</h4></div>
+	</div>
+	<div class="streams">
+		<div class="row">
 		</div>
 	</div>
-	<!--<img class="background-image" src="images/banner-background.png">-->
-
-<div class="result-container">
-	<ul class="row results">
-	</ul>
 </div>
-
 
 <!--<footer>
 	<p>Design & Development - Elain Tran</p>
