@@ -137,3 +137,7 @@ a, a:hover, a:focus {
 .viewers {
 	display: none;
 }
+
+p {
+	font-size: 15px;
+}
