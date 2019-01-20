@@ -13,7 +13,10 @@ var channels = [
   "pokimane",
   "xell",
   "teegrassi",
-  "taj1ma"
+  "taj1ma",
+  "mechaf",
+  "shietz",
+  "vinsonte"
 ];
 
 var streamURL = 'https://api.twitch.tv/kraken/streams/';
@@ -28,7 +31,7 @@ function getChannelInfo() {
       return "https://api.twitch.tv/kraken/" + type + "/" + name + callback;
     }
       $.getJSON(makeStreamURL("streams", channel), function(data) {
-        //console.log(data);
+        console.log(data);
         if (data.stream === null) {
           var status = "offline";
           var game = "Offline";
@@ -59,7 +62,7 @@ function getChannelInfo() {
           } else {
             $(".row").append(html);
           }
-          console.log(channelData);
+          //console.log(channelData);
         });
       });
   });

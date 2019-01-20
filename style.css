@@ -61,7 +61,7 @@ a, a:hover, a:focus {
 	background-color: rgba(0,0,0, 0.75);
 	letter-spacing: 0.5px;
 	/*right: 35px;*/
-	border-radius: 10px 0px 0px 0px;
+	border-radius: 5px 0px 0px 0px;
 }
 
 .circle {
@@ -85,7 +85,7 @@ a, a:hover, a:focus {
 	max-height: 100%;
 	object-fit: cover;
 	box-shadow: 1px 0px 10px rgba(0,0,0, 0.1);
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 .viewers {
